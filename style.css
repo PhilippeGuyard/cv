@@ -219,3 +219,22 @@ li {
     text-decoration: none;
   }
 }
+
+/* Footer */
+.cv-footer {
+  margin-top: 2rem;
+  padding-top: 1rem;
+  text-align: center;
+}
+
+.cv-footer a {
+  font-size: 0.75rem;
+  color: #999;
+  text-decoration: none;
+  border-bottom: none;
+}
+
+.cv-footer a:hover {
+  color: #666;
+  border-bottom: 1px solid #ccc;
+}

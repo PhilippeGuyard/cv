@@ -75,7 +75,7 @@
 \href{mailto:{{CV_EMAIL}}}{{{CV_EMAIL}}} $\cdot$
 {{CV_PHONE}} $\cdot$
 Brighton, UK $\cdot$
-\href{https://www.linkedin.com/in/philippe-guyard/}{LinkedIn} $\cdot$
+\href{https://www.linkedin.com/in/philippe-guyard-dev/}{LinkedIn} $\cdot$
 \href{https://github.com/PhilippeGuyard}{GitHub}%
 }}
 
@@ -189,5 +189,12 @@ BSc, Oceanography \& Marine Biology & University of Southampton \\
 \section*{Languages}
 
 English, French -- Fluent $\cdot$ Dual EU/UK citizen
+
+\vspace{12pt}
+\begin{center}
+{\fontsize{8}{10}\selectfont\textcolor{textgray}{%
+\href{https://github.com/PhilippeGuyard/cv\#how-this-cv-was-made}{How this CV was made}%
+}}
+\end{center}
 
 \end{document}
