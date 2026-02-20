@@ -1,0 +1,27 @@
+# LaTeX build artifacts
+*.aux
+*.log
+*.out
+*.toc
+*.synctex.gz
+philippe-guyard-cv.tex
+philippe-guyard-cv.pdf
+
+# Environment variables (secrets)
+.env
+
+# Old CV files (contain personal info)
+PHILIPPE GUYARD.pdf
+PHILIPPE GUYARD.docx
+e-surv-role-update.txt
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Editor files
+*.swp
+*.swo
+*~
+.vscode/
+.idea/

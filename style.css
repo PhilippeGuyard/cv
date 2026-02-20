@@ -1,0 +1,221 @@
+/* Reset and base styles */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #000;
+  background-color: #fff;
+  padding: 2rem 1rem;
+}
+
+/* Container */
+.container {
+  max-width: 800px;
+  margin: 0 auto;
+  background-color: #fff;
+}
+
+/* Header */
+header {
+  text-align: center;
+  margin-bottom: 2.5rem;
+  padding-bottom: 1.5rem;
+  border-bottom: 2px solid #000;
+}
+
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  margin-bottom: 0.25rem;
+  letter-spacing: -0.5px;
+}
+
+.title {
+  font-size: 1.25rem;
+  font-weight: 400;
+  color: #333;
+  margin-bottom: 0.75rem;
+}
+
+.contact,
+.links {
+  font-size: 0.95rem;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+.contact a,
+.links a {
+  color: #000;
+  text-decoration: none;
+  border-bottom: 1px solid #ccc;
+}
+
+.contact a:hover,
+.links a:hover {
+  border-bottom-color: #000;
+}
+
+.separator {
+  margin: 0 0.5rem;
+  color: #999;
+}
+
+/* Sections */
+section {
+  margin-bottom: 2.5rem;
+}
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 1rem;
+  padding-bottom: 0.25rem;
+  border-bottom: 1px solid #000;
+}
+
+/* Technical Proficiencies */
+.skill-category {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+.skill-category strong {
+  font-weight: 600;
+}
+
+/* Job entries */
+.job {
+  margin-bottom: 2rem;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  margin-bottom: 0.5rem;
+}
+
+h3 {
+  font-size: 1.125rem;
+  font-weight: 600;
+  margin-bottom: 0.25rem;
+}
+
+.job-title {
+  font-style: italic;
+  color: #333;
+  margin-bottom: 0.5rem;
+}
+
+.dates {
+  font-size: 0.95rem;
+  color: #666;
+  white-space: nowrap;
+  margin-left: 1rem;
+}
+
+.job-summary {
+  margin-bottom: 0.75rem;
+  line-height: 1.6;
+}
+
+ul {
+  margin-left: 1.25rem;
+  margin-bottom: 1rem;
+}
+
+li {
+  margin-bottom: 0.5rem;
+  line-height: 1.6;
+}
+
+.earlier-roles {
+  margin-top: 1.5rem;
+  padding-top: 1rem;
+  border-top: 1px solid #ddd;
+}
+
+.earlier-roles strong {
+  font-weight: 600;
+}
+
+.earlier-roles p {
+  margin-top: 0.5rem;
+  line-height: 1.6;
+}
+
+/* Responsive design */
+@media (max-width: 768px) {
+  body {
+    padding: 1rem 0.75rem;
+  }
+
+  h1 {
+    font-size: 2.25rem;
+  }
+
+  .title {
+    font-size: 1.125rem;
+  }
+
+  .job-header {
+    flex-direction: column;
+  }
+
+  .dates {
+    margin-left: 0;
+    margin-top: 0.25rem;
+  }
+
+  .separator {
+    display: none;
+  }
+
+  .contact,
+  .links {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}
+
+/* Print styles for backup PDF generation */
+@media print {
+  body {
+    padding: 0;
+    font-size: 11pt;
+  }
+
+  .container {
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 28pt;
+  }
+
+  h2 {
+    font-size: 14pt;
+    page-break-after: avoid;
+  }
+
+  h3 {
+    page-break-after: avoid;
+  }
+
+  .job {
+    page-break-inside: avoid;
+  }
+
+  a {
+    color: #000;
+    text-decoration: none;
+  }
+}

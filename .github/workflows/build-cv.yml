@@ -1,0 +1,41 @@
+name: Build CV PDF
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - 'philippe-guyard-cv.tex.template'
+      - 'build.sh'
+      - '.github/workflows/build-cv.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    env:
+      CV_EMAIL: ${{ secrets.CV_EMAIL }}
+      CV_PHONE: ${{ secrets.CV_PHONE }}
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build PDF with environment variables
+        uses: xu-cheng/latex-action@v3
+        with:
+          root_file: philippe-guyard-cv.tex
+          pre_compile: |
+            sed -e "s|{{CV_EMAIL}}|$CV_EMAIL|g" \
+                -e "s|{{CV_PHONE}}|$CV_PHONE|g" \
+                philippe-guyard-cv.tex.template > philippe-guyard-cv.tex
+
+      - name: Upload PDF as artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: cv-pdf
+          path: philippe-guyard-cv.pdf
+          retention-days: 90

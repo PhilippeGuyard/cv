@@ -1,0 +1,193 @@
+\documentclass[10pt,a4paper]{article}
+
+% Packages
+\usepackage[top=0.5in, bottom=0.5in, left=0.75in, right=0.75in]{geometry}
+\usepackage{helvet}           % Helvetica font
+\renewcommand{\familydefault}{\sfdefault}  % Use sans-serif by default
+\usepackage[hidelinks]{hyperref}
+\usepackage{enumitem}
+\usepackage{titlesec}
+\usepackage{xcolor}
+\usepackage{tabularx}
+
+% Remove page numbers
+\pagestyle{empty}
+
+% Define colors
+\definecolor{textgray}{gray}{0.4}      % 60% gray for secondary text
+\definecolor{rulegray}{gray}{0.7}      % 30% gray for rules
+\definecolor{bulletgray}{gray}{0.5}    % 50% gray for bullets
+
+% Customize section formatting - uppercase, with rule below
+\titleformat{\section}
+  {\large\bfseries}                % Format: large, bold
+  {}                                % No label
+  {0em}                            % No sep
+  {\MakeUppercase}                 % Before code: uppercase
+  [\vspace{-8pt}\textcolor{rulegray}{\titlerule[0.5pt]}]  % After code: rule below
+
+\titlespacing{\section}{0pt}{16pt}{6pt}
+
+% Customize subsection formatting - for job headers
+\titleformat{\subsection}
+  {\fontsize{10.5}{12}\bfseries}   % 10.5pt bold
+  {}
+  {0em}
+  {}
+
+\titlespacing{\subsection}{0pt}{12pt}{2pt}
+
+% Custom list formatting - hanging indent, gray bullets
+\setlist[itemize]{
+  leftmargin=0.2in,
+  itemsep=2pt,
+  parsep=0pt,
+  topsep=6pt,
+  label=\textcolor{bulletgray}{$\bullet$}
+}
+
+% Line spacing
+\linespread{1.35}
+
+% Micro-typography
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{5pt}
+
+\begin{document}
+
+% ============================================================
+% HEADER - Left-aligned
+% ============================================================
+
+{\fontsize{24}{28}\selectfont\bfseries Philippe Guyard}
+
+\vspace{2pt}
+
+{\fontsize{11}{13}\selectfont\textcolor{textgray}{Senior Python \& Full Stack Developer}}
+
+\vspace{6pt}
+
+\textcolor{rulegray}{\rule{\textwidth}{0.5pt}}
+
+\vspace{8pt}
+
+{\fontsize{9}{11}\selectfont\textcolor{textgray}{%
+\href{mailto:{{CV_EMAIL}}}{{{CV_EMAIL}}} $\cdot$
+{{CV_PHONE}} $\cdot$
+Brighton, UK $\cdot$
+\href{https://www.linkedin.com/in/philippe-guyard/}{LinkedIn} $\cdot$
+\href{https://github.com/PhilippeGuyard}{GitHub}%
+}}
+
+\vspace{12pt}
+
+% ============================================================
+% TECHNICAL PROFICIENCIES - Aligned categories
+% ============================================================
+
+\section*{Technical Proficiencies}
+
+\begin{tabularx}{\textwidth}{@{}p{1.75in}X@{}}
+\textbf{Programming Languages} &
+Python (Django, DRF, Flask, Celery, Redis, Pandas, NumPy, Matplotlib, Jupyter, Langchain, SciPy, Plotly, Seaborn), ES6+ JavaScript, C++ \\[6pt]
+
+\textbf{Cloud \& Infrastructure} &
+AWS (EC2, S3, Lambda, API Gateway, CloudFront), Azure (VMs, Container Apps, Logic Apps), Docker, Terraform, CloudFormation, Heroku, Supabase \\[6pt]
+
+\textbf{Frontend} &
+React, Bootstrap, Material UI, Tailwind, HTML5, CSS3, jQuery, D3.js \\[6pt]
+
+\textbf{Databases} &
+PostgreSQL, MySQL, SQL Server, DynamoDB, MongoDB \\[6pt]
+
+\textbf{Development Tools} &
+Git/GitHub/GitLab, GitHub Actions, CI/CD pipelines \\[6pt]
+
+\textbf{Data Science \& BI} &
+PowerBI, SQL Server, statistical modeling (regression, clustering, time series)
+\end{tabularx}
+
+% ============================================================
+% PROFESSIONAL EXPERIENCE
+% ============================================================
+
+\section*{Professional Experience}
+
+% ---------- e.surv ----------
+\subsection*{e.surv Chartered Surveyors, UK (Fully Remote) \hfill {\normalfont\fontsize{9}{11}\selectfont Jan 2025 -- Present}}
+
+{\fontsize{10}{12}\selectfont\itshape\textcolor{textgray}{Senior Developer}}
+
+\vspace{6pt}
+
+Drive technical innovation within a development team responsible for Robotic Process Automation (RPA), web applications, and API services. Develop and maintain Flask and Django-based web applications with React front-ends, ensuring seamless integration across containerised RPA solutions. Manage cloud infrastructure and deployments across Microsoft Azure platform.
+
+\begin{itemize}
+  \item Architect and maintain containerised RPA solutions, optimising automation workflows and enhancing operational efficiency across surveying processes
+  \item Develop full-stack web applications using Flask, Django, and React, delivering robust solutions for chartered surveying operations
+  \item Manage Azure cloud infrastructure including VMs, Container Apps, and Logic Apps, ensuring scalable and reliable deployment architecture
+  \item Increase system resilience and observability by rolling out critical updates to RPA solutions, improving monitoring capabilities and reducing downtime
+  \item Implement infrastructure optimisations that have improved connection resilience to third-party databases by at least 2 orders of magnitude and reduced container build times by over 10x
+  \item Lead containerisation initiatives for all RPA processes, improving deployment consistency and system reliability
+  \item Collaborate with cross-functional teams to deliver API services supporting critical surveying business operations
+\end{itemize}
+
+% ---------- My Property Pros ----------
+\subsection*{My Property Pros Franchise Ltd., Brighton, UK (Fully Remote) \hfill {\normalfont\fontsize{9}{11}\selectfont Sep 2007 -- Jan 2025}}
+
+{\fontsize{10}{12}\selectfont\itshape\textcolor{textgray}{Lead Developer}}
+
+\vspace{6pt}
+
+Drive technological innovation for a business generating £3M in annual revenue. Lead and mentor a remote team of 3 developers, fostering a collaborative and high-performance environment whilst ensuring timely project delivery and alignment with strategic business goals.
+
+\begin{itemize}
+  \item Architected and led end-to-end development of a custom CRM platform, adopted by 25+ franchises nationwide, centralising bookings, financial management, communications, KPI analytics, and marketing insights
+  \item Managed £800k+ budget, leveraging Django (DRF, Wagtail), Heroku, AWS, Mailgun, SMS integration, automated web scraping, Google Maps API, OpenAI API
+  \item Transformed company's IT landscape by migrating legacy Access database to cloud-based PostgreSQL system, vastly improving deployment speed, scalability, and operational capacity
+  \item Enhanced system into a dynamic CRM tool that significantly streamlined business processes, resulting in increased efficiency and scalability
+\end{itemize}
+
+% ---------- Kinetic ----------
+\subsection*{Kinetic Underwriting Ltd., Brighton, UK (Fully Remote) \hfill {\normalfont\fontsize{9}{11}\selectfont Jun 2006 -- Sep 2022}}
+
+{\fontsize{10}{12}\selectfont\itshape\textcolor{textgray}{SQL Server/Python Developer, Statistician}}
+
+\vspace{6pt}
+
+Support a business generating £12M in annual revenue and serving 220K customers. Developed, analysed, and interpreted complex statistical data to drive decision-making processes and business strategies.
+
+\begin{itemize}
+  \item Directed end-to-end ETL process for motor insurance data pipelines, enabling seamless data transformation, analysis, and advanced analytics for underwriters and executives
+  \item Led migration of legacy systems to modern, robust database architecture on SQL Server, collaborating with third-party vendors to ensure smooth transition
+  \item Utilised Python, SQL Server, and SQL Server Integration Services to enhance data accuracy and accessibility, empowering decision-making and operational efficiency
+\end{itemize}
+
+% ---------- Earlier Roles ----------
+\vspace{4pt}
+\textbf{Earlier Roles}
+
+\vspace{4pt}
+{\fontsize{10}{12}\selectfont\itshape Senior Lecturer, Pathway Leader -- Marine Environmental Science, University of Portsmouth}: Published research on computer and statistical modelling of population genetics, delivered lectures and mentored students.
+
+% ============================================================
+% EDUCATION
+% ============================================================
+
+\section*{Education \& Credentials}
+
+\begin{tabularx}{\textwidth}{@{}X r@{}}
+PhD, Oceanography & University of Southampton \\
+BSc, Oceanography \& Marine Biology & University of Southampton \\
+{\fontsize{9}{11}\selectfont\textcolor{textgray}{(First Class Honours)}} & \\
+\end{tabularx}
+
+% ============================================================
+% LANGUAGES
+% ============================================================
+
+\section*{Languages}
+
+English, French -- Fluent $\cdot$ Dual EU/UK citizen
+
+\end{document}
