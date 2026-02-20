@@ -98,7 +98,7 @@ AWS (EC2, S3, Lambda, API Gateway, CloudFront), Azure (VMs, Container Apps, Logi
 React, Bootstrap, Material UI, Tailwind, HTML5, CSS3, jQuery, D3.js \\[6pt]
 
 \textbf{Databases} &
-PostgreSQL, MySQL, SQL Server, DynamoDB, MongoDB \\[6pt]
+PostgreSQL, MySQL, SQL Server, DynamoDB, MongoDB, Cosmos DB \\[6pt]
 
 \textbf{Development Tools} &
 Git/GitHub/GitLab, GitHub Actions, CI/CD pipelines \\[6pt]
